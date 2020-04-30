@@ -1,0 +1,16 @@
+# Initialize
+alembic init alembic
+
+# Create the baseline
+alembic stamp head
+
+# Add a change
+alembic revision --autogenerate -m "<what is changing>"
+
+# commit the change
+alembic upgrade head   <-- maybe "head", maybe something different
+
+# downgrade the db
+alembic downgrade base  <-- maybe "base", maybe something different
+
+
